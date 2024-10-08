@@ -1,0 +1,344 @@
+.container .hero h2 {
+	
+}
+.container .collection {
+	padding: 40px 0;
+}
+.container .collection .full-bleed {
+	margin-bottom: -12px;
+}
+.container .collection .full-bleed img {
+	object-fit: cover;
+	width: 100%;
+}
+.container .collection .scroll-v {
+	overflow-x: scroll;
+}
+.container .collection .scroll-h {
+	overflow-y: scroll;
+	padding: 24px 28px;
+}
+.container .collection .scroll-h img {
+	min-height: 250px;
+	max-height: 400px;
+}
+.container .collection .scroll-h.tall {
+	padding: 40px 28px;
+}
+.container .collection .scroll-h.tall img {
+	/* min-height: 250px; */
+	max-height: 800px;
+}
+
+.container .collection .scroll {
+	overflow: scroll;
+	height: 400px;
+}
+
+.container .collection article {
+	display: block;
+	padding: 40px;
+	/* display: grid; */
+	/* grid-template-columns: [col-1] 33.33% [col-2] 58.33% [col-end] 8.33% [end]; */
+	/* padding: 80px 28px; */
+	border-top: 1px solid var(--color-sky);
+}
+.container .collection article h3 {
+	color: var(--color-ink);
+	font-feature-settings: 'ss04' on, 'ss02' on;
+	font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24px;
+	padding-right: 12px;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/* font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; */
+}
+.container .collection article h3.bar-top::before {
+	content: '';
+	height: 4px;
+	width: 24px;
+	background-color: var(--color-ink);
+	position: absolute;
+	top: -80px;
+	left: 0;
+}
+.container .collection .full-bleed + article {
+	border-top: none;
+}
+.container .collection .full-bleed + article h3.bar-top::before {
+	top: -72px;
+}
+.caption,
+.container .collection article .caption,
+.container .collection article .details {
+	grid-column-start: 2;
+	max-width: 560px;
+}
+.container .collection article ul.caption {
+	padding-left: 1rem;
+}
+.caption,
+.container .collection article .caption,
+.container .collection article .details .detail-item p,
+.container .collection article .caption li {
+	color: var(--color-ink-lighter);
+	margin-bottom: 16px;
+	font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+.caption i,
+.container .collection article .caption i,
+.container .collection article .details .detail-item p i {
+	font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+
+	font-variant-numeric: oldstyle-nums tabular-nums;
+	font-feature-settings: 'ss03' on, 'ss05' on;
+}
+.caption a,
+.container .collection article .caption a {
+	font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+
+	color: var(--color-blue-900);
+	text-decoration: underline;
+	-webkit-text-decoration-skip: ink;
+	text-decoration-skip: ink;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 0.02em;
+}
+.caption a:hover,
+.container .collection article .caption a:hover {
+	color: var(--color-red);
+}
+
+.caption a.btn,
+.container .collection article .caption a.btn {
+	border: none;
+
+	font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+
+	font-weight: 400;
+	color: var(--color-ink-lighter);
+	padding: 12px;
+	border: 1px solid var(--color-ink-lighter);
+	border-radius: 3px;
+	text-decoration: none;
+}
+.caption a.btn:hover,
+.container .collection article .caption a.btn:hover {
+	color: var(--color-ink);
+	border: 1px solid var(--color-ink);
+}
+.container .collection article .caption .cta {
+	display: block;
+	padding: 40px 0;
+}
+
+.container .collection article .details {
+	display: flex;
+	padding-top: 40px;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: 20px;
+	align-self: stretch;
+	flex-wrap: wrap;
+}
+.container .collection article .details .detail-item {
+	display: block;
+	width: 260px;
+	padding-right: 24px;
+}
+
+.container .collection article .details .detail-item .detail-item-subhead {
+	color: var(--color-ink);
+	font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	padding-bottom: 8px;
+}
+
+.collection .gallery {
+	padding: 80px;
+}
+.collection .gallery .graphic {
+	width: 100%;
+	text-align: center;
+}
+.collection .gallery.bg-sky {
+	background-color: var(--color-sky);
+}
+.collection .gallery.bg-teal {
+	background-color: var(--color-teal-lighter);
+}
+.collection .gallery.bg-white {
+	background-color: white;
+}
+.collection .gallery.bg-black {
+	background-color: black;
+}
+.collection .gallery-grid.bg-poppy,
+.collection .gallery.bg-poppy {
+	background-color: var(--color-poppy-500);
+}
+.bg-blue-dark {
+	background-color: var(--color-blue-900);
+}
+.bg-mint {
+	background-color: var(--color-mint);
+}
+.bg-gradient-01 {
+	background-image: linear-gradient(
+		to top,
+		#f3e7e9 0%,
+		#e3eeff 99%,
+		#e3eeff 100%
+	);
+}
+.collection .gallery img {
+	object-fit: cover;
+	width: calc(98vw - 140px);
+}
+.collection .gallery.bg-black img {
+	max-width: 800px;
+}
+.collection .gallery img.bordered {
+	border: 1px solid var(--color-ink-lightest);
+	border-radius: 3px;
+	max-width: 800px;
+}
+.collection .gallery.fixed-width {
+	text-align: center;
+}
+.collection .gallery.fixed-width img {
+	width: auto;
+}
+.collection .gallery-grid {
+	display: flex;
+	padding: 80px;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: 12px 12px;
+	flex-wrap: wrap;
+}
+.collection .gallery-grid img {
+	max-width: 320px;
+}
+.figure-inline {
+	padding: 24px 0 12px 0;
+}
+.figure-inline img {
+	object-fit: cover;
+	width: calc(66vw - 80px);
+	max-width: 540px;
+}
+.figure-inline > figcaption {
+	color: var(--color-ink);
+	font-weight: 500;
+	padding: 24px 0 12px;
+}
+.figure-inline > figcaption span {
+	/* font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif; */
+	font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif;
+
+	font-style: italic;
+	font-weight: 400;
+	font-size: 12px;
+	padding-right: 12px;
+	color: var(--ink-light, #454f5b);
+	font-variant-numeric: oldstyle-nums tabular-nums;
+	font-feature-settings: 'ss03' on, 'ss05' on;
+}
+.figure-inline > figcaption span::after {
+	content: '';
+	border-right: 1px solid var(--color-ink-light);
+	padding-left: 12px;
+}
+article .eyebrow {
+	color: var(--color-ink);
+	font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: 0.0325em;
+	text-transform: uppercase;
+	grid-column-start: 2;
+	padding-top: 40px;
+	padding-bottom: 16px;
+}
+article code,
+article pre {
+	font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+		'Liberation Mono', monospace;
+	font-size: 90%;
+}
+article code {
+	padding: 0 4px;
+	background-color: var(--color-indigo-50);
+	border-radius: 3px;
+	color: var(--color-ink);
+	font-feature-settings: 'cv08' on, 'ss06' on;
+}
+
+/* Custom styles */
+#fpg-iterations {
+	position: relative;
+	padding-top: 56px;
+	padding-bottom: 0;
+}
+#fpg-iterations figcaption {
+	position: absolute;
+	top: -48px;
+	left: -24px;
+	padding-left: 24px;
+	padding-bottom: 0;
+	border-left: 1px dashed var(--color-ink-lighter);
+}
+#iterations {
+	padding-top: 40px;
+	position: relative;
+}
+#iterations h3 {
+	position: absolute;
+	top: 140px;
+	left: 28px;
+}
+#persona-anim {
+	max-width: 320px;
+}
+
+@media screen and (min-width: 800px) {
+	.container .collection {
+		padding: 40px 0;
+	}
+	.container .collection article {
+		display: grid;
+		grid-template-columns: [col-1] 33.33% [col-2] 58.33% [col-end] 8.33% [end];
+		padding: 80px 28px;
+		border-top: 1px solid var(--color-sky);
+	}
+}

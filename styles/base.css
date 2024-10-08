@@ -1,0 +1,217 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/* base color variables */
+
+	--color-sky: #dfe3e8;
+	--color-sky-dark: #c4cdd5;
+	--color-sky-light: #f4f6f8;
+	--color-sky-lighter: #f9fafb;
+
+	--color-indigo-50: #f4f5fa;
+
+	--color-ink: #212b36;
+	--color-ink-light: #454f5b;
+	--color-ink-lighter: #637381;
+	--color-ink-lightest: #919eab;
+	--color-ink-lightest-50: rgba(145, 158, 171, 0.5);
+
+	--color-poppy-50: #ffeee6;
+	--color-poppy-100: #ffdccc;
+	--color-poppy-400: #fe7434;
+	--color-poppy-500: #ff5800;
+	--color-poppy-600: #cb4101;
+	--color-poppy-700: #983101;
+	--color-poppy-800: #662000;
+	--color-poppy-900: #331000;
+	--color-poppy-950: #190800;
+
+	--color-orange: #ff580a;
+
+	--color-yellow-25: #fffae1;
+	--color-yellow-50: #fff5c2;
+	--color-yellow-100: #fee685;
+	--color-yellow-200: #face00;
+
+	--color-blue-500: #004e8a; /* toyo 0408 */
+	--color-blue-600: #0074cc;
+	--color-blue-700: #005799;
+	--color-blue-900: #001429;
+
+	--color-teal-lighter: #e0f5f5;
+
+	--color-mint: #eaf3f7;
+
+	--color-red: #ff0000;
+}
+
+body {
+	/* Remove default padding */
+	ul[class],
+	ol[class] {
+		padding: 0;
+	}
+
+	/* Remove default margin */
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	p,
+	ul[class],
+	ol[class],
+	li,
+	figure,
+	figcaption,
+	blockquote,
+	dl,
+	dd {
+		margin: 0;
+	}
+}
+nav {
+	padding: 40px 28px 24px 28px;
+	position: fixed;
+	z-index: 1;
+	background-color: var(--color-sky-lighter);
+	display: block;
+	width: 100%;
+}
+nav .subnav,
+nav .main-nav {
+	/* display: grid; */
+	/* grid-template-columns: [col-1] 33.33% [col-2] 58.33% [col-end] 8.33% [end]; */
+	display: block;
+}
+nav p a {
+	font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+		'Liberation Mono', monospace;
+	font-size: 14px;
+	color: var(--color-ink-light);
+	display: block;
+	text-decoration: none;
+}
+nav .subnav p:first-of-type {
+	/* grid-column-start: 1; */
+	display: none;
+}
+nav p.logo {
+	grid-column-start: 2;
+}
+nav p a span {
+	color: var(--color-sky-dark);
+}
+.container-fluid {
+	width: 100%;
+	margin: 0 auto;
+}
+.container:first-of-type {
+	padding: 0 0 15rem 0;
+}
+.container .hero {
+	display: block;
+	padding: 160px 28px 80px 28px;
+}
+
+.container .hero h2 {
+	grid-column-start: 2;
+	color: var(--color-ink);
+	font-family: 'Instrument Sans', 'Brygada 1918', Georgia, 'Times New Roman',
+		Times, serif;
+	font-size: 80px;
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: -0.02em;
+	padding-bottom: 24px;
+	letter-spacing: -0.02em;
+}
+.container .hero .lede {
+	color: var(--ink-lightest, #919eab);
+	font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif;
+	font-size: calc(100vw / 16);
+	line-height: 1.25;
+	/* font-size: 48px; */
+	/* line-height: 56px; */
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+}
+.container .hero .lede a {
+	font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif;
+	text-decoration: none;
+	color: var(--color-ink);
+	/* white-space: nowrap; */
+}
+
+.container .hero .lede a:hover {
+	color: var(--color-red);
+}
+a[href^='https://']::after
+{
+	background: url('../img/icons/icon-external-link.svg') right center no-repeat;
+	background-size: 16px auto;
+	padding-left: 8px;
+	padding-right: 12px;
+	content: '';
+}
+a[href^='https://twitter']
+{
+	white-space: nowrap;
+}
+.caption a[href^='https://']::after
+{
+	padding-left: 2px;
+	background-size: 12px auto;
+}
+.caption a[href^='casestudy/']::after,
+a[href^='b2b/']::after {
+	background: url('../img/icons/icon-lock.svg') right center no-repeat;
+	background-size: 16px auto;
+	padding-left: 8px;
+	padding-right: 12px;
+	content: '';
+}
+
+@media screen and (min-width: 768px) {
+	nav .subnav,
+	nav .main-nav {
+		display: grid;
+		grid-template-columns: [col-1] 33.33% [col-2] 58.33% [col-end] 8.33% [end];
+	}
+	nav .main-nav p:first-of-type {
+		grid-column-start: 2;
+		display: grid;
+	}
+	nav .subnav p:first-of-type {
+		grid-column-start: 1;
+		display: grid;
+	}
+	nav p:first-of-type {
+		grid-column-start: 1;
+		display: grid;
+	}
+	.container .hero {
+		display: grid;
+		grid-template-columns: [col-1] 33.33% [col-2] 58.33% [col-end] 8.33% [end];
+		padding: 160px 28px 80px 28px;
+	}
+	.container .hero .lede {
+		grid-column-start: 2;
+	}
+
+	.container .hero .lede {
+		/* color: var(--ink-lightest, #919eab); */
+		/* font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif; */
+		font-size: 48px;
+		/* font-style: normal; */
+		/* font-weight: 500; */
+		line-height: 56px;
+		/* letter-spacing: -0.02em; */
+	}
+}

@@ -1,0 +1,141 @@
+nav {
+	position: relative;
+	background-color: var(--color-sky-lighter);
+}
+
+.container .hero .lede sup {
+	font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif;
+	font-weight: 400;
+	font-feature-settings: 'ss04' on, 'sups' on;
+	font-size: 50%;
+	/* line-height: 52px; */
+	line-height: 1.125;
+	padding: 0;
+	margin: 0;
+	padding-left: 4px;
+	letter-spacing: 1px;
+}
+
+.container .hero .lede a {
+	font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif;
+	color: var(--color-ink);
+	text-decoration: none;
+}
+.container .hero .lede a sup {
+	color: var(--color-ink-lightest);
+}
+.container .hero .lede a:hover,
+.container .hero .lede a:hover sup {
+	color: var(--color-red);
+}
+.showcase {
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.showcase .worksample a {
+	display: block;
+	padding: 64px;
+	box-sizing: border-box;
+	text-decoration: none;
+	cursor: pointer;
+	width: 100%;
+}
+.showcase .worksample.wide a {
+	width: 100%;
+}
+.showcase .worksample a:hover {
+	background-color: white;
+}
+.showcase .worksample:not(:first-of-type) a {
+	border-left: 1px solid var(--color-sky);
+}
+
+.showcase .worksample a {
+	border-top: 1px solid var(--color-sky);
+}
+
+.showcase:not(:nth-of-type(2)) .worksample:last-of-type a {
+	border-bottom: 1px solid var(--color-sky);
+}
+
+.showcase .worksample .worksample-caption .reference-num {
+	display: block;
+	color: var(--color-ink-lightest);
+	font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	padding-bottom: 8px;
+}
+.showcase .worksample .worksample-caption h3 {
+	color: var(--color-ink);
+	font-variant-numeric: lining-nums proportional-nums;
+	font-feature-settings: 'cv08' on, 'ss01' on;
+	font-family: 'Brygada 1918', Georgia, 'Times New Roman', Times, serif;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: -0.025em;
+	padding-bottom: 8px;
+}
+.showcase .worksample .worksample-caption p {
+	color: var(--color-ink-lighter);
+	font-family: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 140%;
+	max-width: 320px;
+	padding-top: 8px;
+	padding-bottom: 40px;
+}
+.showcase .worksample img {
+	width: 100%;
+}
+.showcase .worksample .thumbnail img:nth-of-type(2) {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.showcase {
+		display: flex;
+		flex-direction: row;
+		border-bottom: 1px solid var(--color-sky);
+	}
+
+	.showcase + .showcase .worksample a {
+		border-top: none;
+	}
+	.showcase:not(:nth-of-type(2)) .worksample:last-of-type a {
+		border-bottom: none;
+	}
+
+	.showcase .worksample a {
+		padding: 24px;
+		/* width: 33.33vw; */
+		/* flex-grow: 1; */
+		width: calc(33.33vw - 8px);
+	}
+	.showcase .worksample:last-of-type a {
+		border-bottom: none;
+	}
+	.showcase .worksample.wide a {
+		/* width: 66.66vw; */
+		/* flex-grow: 2; */
+		width: calc(66.66vw - 8px);
+	}
+
+	.showcase .worksample .thumbnail {
+		display: flex;
+		flex-direction: row;
+	}
+	.showcase .worksample .thumbnail img {
+		width: 50%;
+	}
+	.showcase .worksample .thumbnail img:nth-of-type(2) {
+		display: block;
+	}
+}
